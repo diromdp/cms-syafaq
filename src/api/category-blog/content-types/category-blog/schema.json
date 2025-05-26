@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_blogs",
+  "info": {
+    "singularName": "category-blog",
+    "pluralName": "category-blogs",
+    "displayName": "category-blog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "category_blog"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}
