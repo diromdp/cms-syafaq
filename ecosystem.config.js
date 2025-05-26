@@ -20,7 +20,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'deploy_user',
-      host: ['your-production-server-ip'],
+      host: ['149.28.156.13'],
       ref: 'origin/main',
       repo: 'git@github.com:username/blog-syafaq.git',
       path: '/var/www/blog-syafaq',
