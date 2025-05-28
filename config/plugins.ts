@@ -11,8 +11,7 @@ module.exports = ({ env }) => ({
                 params: {
                     Bucket: 'testimoni',
                     ACL: 'public-read',
-                    signatureVersion: 'v4',
-                    Key: (filename) => `Assets-strapi/${filename}`
+                    signatureVersion: 'v4'
                 },
                 forcePathStyle: true,
                 credentials: {
@@ -22,10 +21,12 @@ module.exports = ({ env }) => ({
             },
             actionOptions: {
                 upload: {
-                    ACL: 'public-read'
+                    ACL: 'public-read',
+                    Key: (filename) => `Assets-strapi/${filename}`
                 },
                 uploadStream: {
-                    ACL: 'public-read'
+                    ACL: 'public-read',
+                    Key: (filename) => `Assets-strapi/${filename}`
                 }
             }
         },
